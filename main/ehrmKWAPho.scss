@@ -1,0 +1,66 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-stack: 'Helvetica Neue', sans-serif;
+
+@mixin transition($property, $duration) {
+  transition: $property $duration;
+}
+
+.button {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: $font-stack;
+  @include transition(background-color, 0.3s);
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ecf0f1;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 15px;
+  @include transition(box-shadow, 0.3s);
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-large {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.text-muted {
+  color: #7f8c8d;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
